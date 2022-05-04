@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiformationsService } from '../apiformations.service';
+import { Subscription } from 'rxjs';
+import { Formation } from '../formation';
 
 @Component({
   selector: 'app-page-accueil',
@@ -7,9 +10,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageAccueilComponent implements OnInit {
 
-  constructor() { }
+  requestFormation : Subscription | undefined;
+
+  formation: any = {
+    nomDomaine: "",
+    nomFormation: "",
+    description: "",
+    prix: 0,
+    nomThemeFormation: ""
+  }
+
+  formations : Formation [] = [];
+  constructor(private apiformation: ApiformationsService) { }
 
   ngOnInit(): void {
+    console.log('ok');
+    this.requestFormation =  this.apiformation.getFormations().subscribe({
+      next: (result: any)=>{
+        for (const iterator of result) {
+          let formation = new Formation(iterator.nomDomaine, iterator.nomFormation,iterator.description,iterator.prix,iterator.nomThemeFormation);
+          this.formations.push(formation);
+          console.log(formation);
+        }
+      },
+      error:(err)=> {console.error("Error : "+ err); }
+    });
+    
   }
 
 }
