@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiformationsService } from '../apiformations.service';
 import { Subscription } from 'rxjs';
-import { Formation } from '../formation';
+import { Formation } from '../models/formation';
 
 @Component({
   selector: 'app-page-accueil',
@@ -12,14 +12,6 @@ export class PageAccueilComponent implements OnInit {
 
   requestFormation : Subscription | undefined;
 
-  formation: any = {
-    nomDomaine: "",
-    nomFormation: "",
-    description: "",
-    prix: 0,
-    nomThemeFormation: ""
-  }
-
   formations : Formation [] = [];
   constructor(private apiformation: ApiformationsService) { }
 
@@ -28,7 +20,7 @@ export class PageAccueilComponent implements OnInit {
     this.requestFormation =  this.apiformation.getFormations().subscribe({
       next: (result: any)=>{
         for (const iterator of result) {
-          let formation = new Formation(iterator.nomDomaine, iterator.nomFormation,iterator.description,iterator.prix,iterator.nomThemeFormation);
+          let formation = new Formation(iterator.idFormation ,iterator.nomDomaine, iterator.nomFormation,iterator.description,iterator.prix,iterator.nomThemeFormation, iterator.listeSessionFormation);
           this.formations.push(formation);
           console.log(formation);
         }

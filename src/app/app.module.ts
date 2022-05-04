@@ -12,6 +12,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { FormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
+import { ListFormationComponent } from './list-formation/list-formation.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HttpClientModule } from '@angular/common/http';
     PageAccueilComponent,
     ContactComponent,
     CatalogueComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ListFormationComponent
   ],
   imports: [
     BrowserModule,

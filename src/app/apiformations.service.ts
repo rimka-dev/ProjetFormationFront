@@ -12,4 +12,9 @@ export class ApiformationsService {
   getFormations(): Observable<any>{
     return this.http.get(this.urlFormation);
   }
+
+  getFormationById(id:string){
+    return this.http.get(this.urlFormation+"/"+id);
+  }
+
 }

@@ -1,0 +1,43 @@
+<div class="container">
+    <div *ngIf="!error" class="m-3">
+        <h3 *ngIf="id" class="text-center">Infos sur le formation</h3>
+        <div class="card bg-light" style="width: 18rem;">
+            <img class=" p-3 card-img-top" src="assets/formation.png" alt="Card image cap">
+            <div class="card-body">
+                <h4 class="card-title ">{{ formation?.nomDomaine}}</h4>
+                <p class="card-text "><b>Formation :</b> {{formation?.nomFormation}}</p>
+                <p class="card-text"><b>informations :</b> {{formation?.description}}</p>
+                <p class="card-text"><b>Theme :</b> {{formation?.nomThemeFormation}}</p>
+                <p class="card-text"><b>Prix :</b> {{formation?.prix}}€ ttc </p>
+                <div *ngIf="id">
+                    <p class="card-text"><b>Type de formation :</b>
+                        {{formation?.listeSessionFormation[0].typeFormation}}</p>
+                    <p class="card-text"><b>Date de début :</b> {{formation?.listeSessionFormation[0].dateDebut |
+                        date:'dd-MM-yyy'}}</p>
+                    <p class="card-text"><b>Date de fin :</b> {{formation?.listeSessionFormation[0].dateFin |
+                        date:'dd-MM-yyy'}}</p>
+                    <a class="btn btn-primary m-2" routerLink="/">Retour</a>
+                </div>
+                <a [hidden]="id" class="btn btn-primary m-2" routerLink="/formation/{{formation?.idFormation}}">Plus de
+                    détails</a>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <div *ngIf="error" class="error">
+        Une erreur est survenue durant le chargement. Veuillez réessayer.
+    </div>
+</div>
+
+
+
+<!-- <div class="col-4 mt-2" *ngFor="let elem of formations" >
+    <h4> {{ elem.nomDomaine}}</h4>
+    <p><b>Formation :</b> {{elem.nomFormation}}</p>
+    <p><b>informations :</b> {{elem.description}}</p>
+    <p><b>Theme :</b> {{elem.nomThemeFormation}}</p>
+    <p><b>Prix :</b> {{elem.prix}}€ ttc </p>
+</div> -->

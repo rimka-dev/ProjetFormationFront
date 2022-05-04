@@ -1,13 +1,6 @@
 <div class="container">
     <h1 class="text-center">Nos formations</h1>
     <div class="row">
-        <div class="col-4 mt-2" *ngFor="let elem of formations" >
-            <h4> {{ elem.nomDomaine}}</h4>
-            <p><b>Formation :</b> {{elem.nomFormation}}</p>
-            <p><b>informations :</b> {{elem.description}}</p>
-            <p><b>Theme :</b> {{elem.nomThemeFormation}}</p>
-            <p><b>Prix :</b> {{elem.prix}}€ ttc </p>
-        </div>
-       
+        <app-list-formation class="col-4 mt-2" *ngFor="let elem of formations" [formation]="elem"></app-list-formation>
     </div>
 </div>
