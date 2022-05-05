@@ -13,6 +13,11 @@ import { FormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
 import { ListFormationComponent } from './list-formation/list-formation.component';
+import { AccueilBackComponent } from './backOffice/accueil-back/accueil-back.component';
+import { MenuBackComponent } from './backOffice/menu-back/menu-back.component';
+import { ListeFComponent } from './backOffice/formation/liste-f/liste-f.component';
+import { AddformationComponent } from './backOffice/formation/addformation/addformation.component';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +28,12 @@ import { ListFormationComponent } from './list-formation/list-formation.componen
     ContactComponent,
     CatalogueComponent,
     PageNotFoundComponent,
-    ListFormationComponent
+    ListFormationComponent,
+    AccueilBackComponent,
+    MenuBackComponent,
+    ListeFComponent,
+    AddformationComponent
+   
   ],
   imports: [
     BrowserModule,

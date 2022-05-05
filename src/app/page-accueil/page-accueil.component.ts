@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiformationsService } from '../apiformations.service';
+import { ApiformationsService } from '../services/apiformations.service';
 import { Subscription } from 'rxjs';
 import { Formation } from '../models/formation';
 
