@@ -20,12 +20,12 @@ export class PageAccueilComponent implements OnInit {
     this.requestFormation =  this.apiformation.getFormations().subscribe({
       next: (result: any)=>{
         for (const iterator of result) {
-          let formation = new Formation(iterator.idFormation ,iterator.nomDomaine, iterator.nomFormation,iterator.description,iterator.prix,iterator.nomThemeFormation, iterator.listeSessionFormation);
+          let formation = new Formation(iterator.idFormation ,iterator.nomDomaine, iterator.nomFormation,iterator.description,iterator.prix,iterator.nomThemeFormation,iterator.listeSousThemeFormation ,iterator.listeSessionFormation);
           this.formations.push(formation);
           console.log(formation);
         }
       },
-      error:(err)=> {console.error("Error : "+ err); }
+      error:(err:any)=> {console.error("Error : "+ err); }
     });
     
   }
