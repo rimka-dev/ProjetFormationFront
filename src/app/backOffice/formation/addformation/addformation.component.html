@@ -7,7 +7,7 @@
                 <div class="col-md-6">
                     <label for="nomDomaine">Domaine</label>
                     <select class="form-control" id="nomDomaine" name="nomDomaine" ngModel [(ngModel)]="formation.nomDomaine" required >
-                  <option selected="selected" >Informatique</option>
+                  <option >Informatique</option>
                   <option>Commerce</option>
                   <option>RH</option>
                   </select>
@@ -33,6 +33,7 @@
                 </div>
                 <div class="mb-3 col-12">
                   <button [disabled]="formationForm.invalid"  type="submit" class="btn btn-primary m-1">Ajouter</button>
+                  <a  (click)="onResetForm(formationForm)" class="btn btn-warning m-2">Effacer</a>
                   <a routerLink="/admin/formation/liste" class="btn btn-success m-2 mx-auto">Retour</a>
                 </div>
               </form>

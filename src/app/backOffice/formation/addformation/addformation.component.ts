@@ -32,6 +32,8 @@ export class AddformationComponent {
     
       f.resetForm();
     }
-  
+  onResetForm(f:NgForm){
+    f.resetForm();
+  }
 
 }
