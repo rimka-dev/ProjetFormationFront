@@ -31,4 +31,12 @@ export class ApiformationsService {
     return this.http.post<Formation>(this.urlFormation,formation,httpOptionsCreate);
   }
 
+  updateFormation(formation:Formation){
+    let httpOptionsCreate = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json'
+      })
+    };
+    return this.http.put<Formation>(this.urlFormation,formation,httpOptionsCreate);
+  }
 }

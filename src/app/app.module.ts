@@ -17,6 +17,8 @@ import { AccueilBackComponent } from './backOffice/accueil-back/accueil-back.com
 import { MenuBackComponent } from './backOffice/menu-back/menu-back.component';
 import { ListeFComponent } from './backOffice/formation/liste-f/liste-f.component';
 import { AddformationComponent } from './backOffice/formation/addformation/addformation.component';
+import { UpdateformationComponent } from './backOffice/formation/updateformation/updateformation.component';
+
 
 
 @NgModule({
@@ -32,7 +34,9 @@ import { AddformationComponent } from './backOffice/formation/addformation/addfo
     AccueilBackComponent,
     MenuBackComponent,
     ListeFComponent,
-    AddformationComponent
+    AddformationComponent,
+    UpdateformationComponent,
+   
    
   ],
   imports: [
