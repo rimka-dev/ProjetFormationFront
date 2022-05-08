@@ -1,9 +1,9 @@
 <header>
     <div class="row">
-        <div class="col-4">
-            <img src="/assets/logo.png" class="w-25 m-3 img-thumbnail" alt="photo profil">
+        <div class="col-5">
+            <img src="/assets/logo.png" class="w-25 m-4 img-thumbnail" alt="photo profil">
         </div>
-        <div class="col-8">
+        <div class="col-7">
             <h1 class=" mt-5">Ecole de formation</h1>
         </div>
     </div>
@@ -19,8 +19,13 @@
                     <a class="nav-link active" routerLink="/page-accueil" aria-current="page" href="#">Accueil</a>
                     <a class="nav-link active" routerLink="/catalogue"  href="#">Formations</a>
                     <a class="nav-link active" routerLink="/contact" href="#">Contact</a>
+                    <a class="nav-link active" routerLink="/admin" href="#">Admin</a>
                 </div>
+                <form class="container-fluid d-flex justify-content-end">
+                    <button (click)="connexion()" class="btn btn-primary me-2" type="button">Connexion</button>
+                  </form>
             </div>
+            
         </div>
     </nav>
 </header>

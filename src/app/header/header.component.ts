@@ -12,4 +12,8 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  connexion(){
+    location.replace("http://localhost:8080/login/stagiaire");
+  }
+
 }
