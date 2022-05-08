@@ -18,6 +18,8 @@ import { MenuBackComponent } from './backOffice/menu-back/menu-back.component';
 import { ListeFComponent } from './backOffice/formation/liste-f/liste-f.component';
 import { AddformationComponent } from './backOffice/formation/addformation/addformation.component';
 import { UpdateformationComponent } from './backOffice/formation/updateformation/updateformation.component';
+import { ListestagiaireComponent } from './backOffice/stagiaire/listestagiaire/listestagiaire.component';
+import { AddstagiaireComponent } from './backOffice/stagiaire/addstagiaire/addstagiaire.component';
 
 
 
@@ -36,6 +38,8 @@ import { UpdateformationComponent } from './backOffice/formation/updateformation
     ListeFComponent,
     AddformationComponent,
     UpdateformationComponent,
+    ListestagiaireComponent,
+    AddstagiaireComponent,
    
    
   ],
