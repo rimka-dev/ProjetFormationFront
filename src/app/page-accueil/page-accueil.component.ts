@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiformationsService } from '../services/apiformations.service';
+import { ApiformationsService } from '../apiformations.service';
 import { Subscription } from 'rxjs';
 import { Formation } from '../models/formation';
 
@@ -20,12 +20,12 @@ export class PageAccueilComponent implements OnInit {
     this.requestFormation =  this.apiformation.getFormations().subscribe({
       next: (result: any)=>{
         for (const iterator of result) {
-          let formation = new Formation(iterator.idFormation ,iterator.nomDomaine, iterator.nomFormation,iterator.description,iterator.prix,iterator.nomThemeFormation,iterator.listeSousThemeFormation ,iterator.listeSessionFormation);
+          let formation = new Formation(iterator.idFormation ,iterator.nomDomaine, iterator.nomFormation,iterator.description,iterator.prix,iterator.nomThemeFormation, iterator.listeSessionFormation);
           this.formations.push(formation);
           console.log(formation);
         }
       },
-      error:(err:any)=> {console.error("Error : "+ err); }
+      error:(err)=> {console.error("Error : "+ err); }
     });
     
   }

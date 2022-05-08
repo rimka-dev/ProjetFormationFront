@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Formation } from '../models/formation';
 import { ActivatedRoute } from '@angular/router';
-import { ApiformationsService } from '../services/apiformations.service';
+import { ApiformationsService } from '../apiformations.service';
 
 @Component({
   selector: 'app-list-formation',
@@ -13,8 +13,6 @@ export class ListFormationComponent  {
   @Input()
   formation: any
   id: string = "";
-  public messageErreur:string="";
-  public messageOK : string=""
   error: boolean = false;
 
   constructor(private activatedRoute: ActivatedRoute,private apiformation: ApiformationsService) { 
