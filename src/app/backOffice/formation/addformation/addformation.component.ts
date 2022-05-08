@@ -10,7 +10,7 @@ import {NgForm} from '@angular/forms';
 })
 export class AddformationComponent {
 
-  public formation:Formation = new Formation(1, "", "", "", 1, "", [], []);
+  public formation:Formation = new Formation(1, "", "", "", 0, "", [], []);
   public messageErreur:string="";
   public messageOK : string=""
   constructor(private apiformation: ApiformationsService ) { }
