@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Formation } from '../models/formation';
 import { ActivatedRoute } from '@angular/router';
 import { ApiformationsService } from '../apiformations.service';
 
