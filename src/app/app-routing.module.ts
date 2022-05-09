@@ -12,6 +12,7 @@ import { DetailformationComponent } from './formation/detailformation/detailform
 import { ListFormationComponent } from './list-formation/list-formation.component';
 import { PageAccueilComponent } from './page-accueil/page-accueil.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { SessioninscriptionComponent } from './session/sessioninscription/sessioninscription.component';
 
 const routes: Routes = [
   {path: 'page-accueil', component: PageAccueilComponent },
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path: 'catalogue', component: CatalogueComponent },
   {path: 'formation/:id', component: DetailformationComponent },
   {path: 'contact', component: ContactComponent },
+  {path: 'session/inscription/:id/:idFormation', component: SessioninscriptionComponent },
   {path: 'admin', component: AccueilBackComponent },
   {path: 'admin/formation/liste', component: ListeFComponent },
   {path: 'admin/formation/ajouter', component: AddformationComponent },

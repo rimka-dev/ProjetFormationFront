@@ -19,7 +19,7 @@
                 date:'dd-MM-yyy'}}</p>
             <p style="white-space: pre-line;"><b>Prix :</b> {{formation?.prix}}€ ttc </p>
             <a class="btn btn-outline-primary m-2" routerLink="/">Retour</a>
-            <a href="" class="btn btn-outline-success ">S'inscrire </a>
+            <a href="" class="btn btn-outline-success" routerLink="/session/inscription/{{formation?.listeSessionFormation[0].idSession}}/{{formation?.idFormation}}">S'inscrire </a>
         </article>
     </div>
 
