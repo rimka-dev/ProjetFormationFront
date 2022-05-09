@@ -14,11 +14,11 @@
                 </div>
                 <div class="col-md-6">
                   <label for="nomFormation" class="form-label">Formation</label>
-                  <input type="text" placeholder="Nom de la formation" class="form-control" id="nomFormation" name="nomFormation"[(ngModel)]="formation.nomFormation" required minlength="5" maxlength="30">
+                  <input type="text" placeholder="Nom de la formation" class="form-control" id="nomFormation" name="nomFormation"[(ngModel)]="formation.nomFormation" required minlength="5" maxlength="40">
                 </div>
                 <div class="col-6">
                     <label for="nomThemeFormation" class="form-label">Theme de la formation</label>
-                    <input type="text" placeholder="Theme" class="form-control" id="nomThemeFormation" required minlength="5" maxlength="30" name="nomThemeFormation" [(ngModel)]="formation.nomThemeFormation">
+                    <input type="text" placeholder="Theme" class="form-control" id="nomThemeFormation" required minlength="5" maxlength="40" name="nomThemeFormation" [(ngModel)]="formation.nomThemeFormation">
                 </div>
                 <div class="col-6">
                     <label for="prix" class="form-label">Prix € TTC</label>

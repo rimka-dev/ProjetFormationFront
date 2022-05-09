@@ -8,6 +8,7 @@ import { AddstagiaireComponent } from './backOffice/stagiaire/addstagiaire/addst
 import { ListestagiaireComponent } from './backOffice/stagiaire/listestagiaire/listestagiaire.component';
 import { CatalogueComponent } from './catalogue/catalogue.component';
 import { ContactComponent } from './contact/contact.component';
+import { DetailformationComponent } from './formation/detailformation/detailformation.component';
 import { ListFormationComponent } from './list-formation/list-formation.component';
 import { PageAccueilComponent } from './page-accueil/page-accueil.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -16,7 +17,7 @@ const routes: Routes = [
   {path: 'page-accueil', component: PageAccueilComponent },
   {path: '', redirectTo: 'page-accueil', pathMatch: 'full'},
   {path: 'catalogue', component: CatalogueComponent },
-  {path: 'formation/:id', component: ListFormationComponent },
+  {path: 'formation/:id', component: DetailformationComponent },
   {path: 'contact', component: ContactComponent },
   {path: 'admin', component: AccueilBackComponent },
   {path: 'admin/formation/liste', component: ListeFComponent },
