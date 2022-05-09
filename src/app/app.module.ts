@@ -20,6 +20,7 @@ import { AddformationComponent } from './backOffice/formation/addformation/addfo
 import { UpdateformationComponent } from './backOffice/formation/updateformation/updateformation.component';
 import { ListestagiaireComponent } from './backOffice/stagiaire/listestagiaire/listestagiaire.component';
 import { AddstagiaireComponent } from './backOffice/stagiaire/addstagiaire/addstagiaire.component';
+import { DetailformationComponent } from './formation/detailformation/detailformation.component';
 
 
 
@@ -40,6 +41,7 @@ import { AddstagiaireComponent } from './backOffice/stagiaire/addstagiaire/addst
     UpdateformationComponent,
     ListestagiaireComponent,
     AddstagiaireComponent,
+    DetailformationComponent,
    
    
   ],
