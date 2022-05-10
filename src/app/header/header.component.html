@@ -16,13 +16,17 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link active" routerLink="/page-accueil" aria-current="page" href="#">Accuiel</a>
+                    <a class="nav-link active" routerLink="/page-accueil" aria-current="page" href="#">Acceuil</a>
                     <a class="nav-link active" routerLink="/catalogue"  href="#">Formations</a>
                     <a class="nav-link active" routerLink="/contact" href="#">Contact</a>
-                    <a class="nav-link active" routerLink="/admin" href="#">Admin</a>
+                    <div [ngSwitch]="stagiaire.statut">
+                        <a *ngSwitchCase="'Stagiaire'" class="nav-link active" routerLink="/admin" href="#">Compte</a>
+                        <a  *ngSwitchCase="'admin'" class="nav-link active" routerLink="/admin" href="#">Admin</a>
+                    </div>
                 </div>
                 <form class="container-fluid d-flex justify-content-end">
-                    <button (click)="connexion()" class="btn btn-primary me-2" type="button">Connexion</button>
+                    <button  (click)="connexion()" class="btn btn-primary me-2" type="button">Connexion</button>
+                    <button   (click)="deconnexion()" class="btn btn-danger me-2" type="button"   >Deconnexion</button>
                   </form>
             </div>
             
