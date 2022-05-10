@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { Stagiaire } from '../models/stagiaire/stagiaire';
 import { ConectstagiaireService } from '../services/connexion/conectstagiaire.service';
 
 @Component({
@@ -11,7 +13,7 @@ export class HeaderComponent implements OnInit {
   requestFormation : Subscription | undefined;
   stagiaire : any;
   isConnected : number = 0;
-  constructor(private apiconnexionstagiaire : ConectstagiaireService) {}
+  constructor(private apiconnexionstagiaire : ConectstagiaireService,private route: Router) {}
 
   ngOnInit(): void {
     this.requestFormation = this.apiconnexionstagiaire.getConnexionStagiaires().subscribe({
@@ -41,10 +43,12 @@ export class HeaderComponent implements OnInit {
   deconnexion(){
     this.apiconnexionstagiaire.getDeconnexionStagiaires().subscribe({
       next: (result: any) => {}
-     
   });
   location.reload();
+  }
 
+  profilStagiaire(id : any){
+    this.route.navigate(["profil/stagiaire/"+id]);
   }
 
   

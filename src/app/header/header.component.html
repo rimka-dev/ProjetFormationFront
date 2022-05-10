@@ -20,7 +20,7 @@
                     <a class="nav-link active" routerLink="/catalogue"  href="#">Formations</a>
                     <a class="nav-link active" routerLink="/contact" href="#">Contact</a>
                     <div [ngSwitch]="stagiaire.statut">
-                        <a *ngSwitchCase="'Stagiaire'" class="nav-link active" routerLink="/admin" href="#">Compte</a>
+                        <a *ngSwitchCase="'Stagiaire'" (click)="profilStagiaire(stagiaire.idUtilisateur)" class="nav-link active" routerLink="/admin" href="#">Compte</a>
                         <a  *ngSwitchCase="'admin'" class="nav-link active" routerLink="/admin" href="#">Admin</a>
                     </div>
                 </div>
