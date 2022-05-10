@@ -13,13 +13,19 @@ import { FormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
 import { ListFormationComponent } from './list-formation/list-formation.component';
-import { AccueilBackComponent } from './backOffice/accueil-back/accueil-back.component';
+
 import { MenuBackComponent } from './backOffice/menu-back/menu-back.component';
 import { ListeFComponent } from './backOffice/formation/liste-f/liste-f.component';
 import { AddformationComponent } from './backOffice/formation/addformation/addformation.component';
 import { UpdateformationComponent } from './backOffice/formation/updateformation/updateformation.component';
 import { ListestagiaireComponent } from './backOffice/stagiaire/listestagiaire/listestagiaire.component';
 import { AddstagiaireComponent } from './backOffice/stagiaire/addstagiaire/addstagiaire.component';
+import { DetailformationComponent } from './formation/detailformation/detailformation.component';
+import { SessioninscriptionComponent } from './session/sessioninscription/sessioninscription.component';
+import { AccueilBackComponent } from './backOffice/accueil-back/accueil-back.component';
+import { ListeformateurComponent } from './backOffice/formateur/listeformateur/listeformateur.component';
+import { UpdateformateurComponent } from './backOffice/formateur/updateformateur/updateformateur.component';
+import { UpdateStagiaireComponent } from './backOffice/stagiaire/update-stagiaire/update-stagiaire.component';
 
 
 
@@ -40,8 +46,11 @@ import { AddstagiaireComponent } from './backOffice/stagiaire/addstagiaire/addst
     UpdateformationComponent,
     ListestagiaireComponent,
     AddstagiaireComponent,
-   
-   
+    DetailformationComponent,
+    SessioninscriptionComponent,
+    ListeformateurComponent,
+    UpdateformateurComponent,
+    UpdateStagiaireComponent
   ],
   imports: [
     BrowserModule,

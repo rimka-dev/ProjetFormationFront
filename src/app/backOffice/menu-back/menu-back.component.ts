@@ -9,6 +9,14 @@ export class MenuBackComponent implements OnInit {
 
   constructor() { }
 
+  noteFormateurRedirect(){
+    location.replace("http://localhost:8080/admin/note-experience-formateur");
+  }
+
+  mesTachesRedirect(){
+    location.replace("http://localhost:8080/admin/mes-taches");
+  }
+
   ngOnInit(): void {
   }
 

@@ -3,6 +3,7 @@ import { ApiformationsService } from '../services/apiformations.service';
 import { Subscription } from 'rxjs';
 import { Formation } from '../models/formation';
 
+
 @Component({
   selector: 'app-page-accueil',
   templateUrl: './page-accueil.component.html',
@@ -13,7 +14,10 @@ export class PageAccueilComponent implements OnInit {
   requestFormation : Subscription | undefined;
 
   formations : Formation [] = [];
-  constructor(private apiformation: ApiformationsService) { }
+ 
+  constructor(private apiformation: ApiformationsService) {
+   
+   }
 
   ngOnInit(): void {
     console.log('ok');
@@ -27,7 +31,10 @@ export class PageAccueilComponent implements OnInit {
       },
       error:(err:any)=> {console.error("Error : "+ err); }
     });
-    
+  };
+
+  ngAfterViewInit(){
+   
   }
 
 }
