@@ -15,6 +15,7 @@ import { DetailformationComponent } from './formation/detailformation/detailform
 import { ListFormationComponent } from './list-formation/list-formation.component';
 import { PageAccueilComponent } from './page-accueil/page-accueil.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ProfilstagiaireComponent } from './profilstagiaire/profilstagiaire/profilstagiaire.component';
 import { SessioninscriptionComponent } from './session/sessioninscription/sessioninscription.component';
 
 const routes: Routes = [
@@ -31,6 +32,7 @@ const routes: Routes = [
   {path: 'admin/formation/udateformation/:id', component: UpdateformationComponent },
   {path: 'admin/stagiaire/liste', component: ListestagiaireComponent },
   {path: 'admin/stagiaire/ajouter', component: AddstagiaireComponent },
+  {path: 'profil/stagiaire/:id', component: ProfilstagiaireComponent },
   {path: 'admin/stagiaire/udateStagiaire/:id', component: UpdateStagiaireComponent },
   {path: 'admin/formateur/liste', component: ListeformateurComponent },
   {path: 'admin/formateur/udateFormateur/:id', component: UpdateformateurComponent },
