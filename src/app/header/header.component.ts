@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { Stagiaire } from '../models/stagiaire/stagiaire';
 import { ConectstagiaireService } from '../services/connexion/conectstagiaire.service';
 
 @Component({
@@ -10,8 +12,8 @@ import { ConectstagiaireService } from '../services/connexion/conectstagiaire.se
 export class HeaderComponent implements OnInit {
   requestFormation : Subscription | undefined;
   stagiaire : any;
-  isConnected : number = 0;
-  constructor(private apiconnexionstagiaire : ConectstagiaireService) {}
+  isConnected = true;
+  constructor(private apiconnexionstagiaire : ConectstagiaireService,private route: Router) {}
 
   ngOnInit(): void {
     this.requestFormation = this.apiconnexionstagiaire.getConnexionStagiaires().subscribe({
@@ -21,12 +23,13 @@ export class HeaderComponent implements OnInit {
        
        
        this.stagiaire = result;
+       console.log("this.stagiaire = "+this.stagiaire);
       if(this.stagiaire == null){
-        this.isConnected = 0;
+        this.isConnected = false;
       }else{
-        this.isConnected = 1;
+        this.isConnected = true;
       }
-      console.log(this.isConnected);
+      console.log("this.isConnected = "+this.isConnected);
       
           console.log("connected :"+this.stagiaire.statut);
       
@@ -41,10 +44,13 @@ export class HeaderComponent implements OnInit {
   deconnexion(){
     this.apiconnexionstagiaire.getDeconnexionStagiaires().subscribe({
       next: (result: any) => {}
-     
   });
+  this.isConnected = false;
   location.reload();
+  }
 
+  profilStagiaire(id : any){
+    this.route.navigate(["profil/stagiaire/"+id]);
   }
 
   

@@ -17,6 +17,10 @@ export class MenuBackComponent implements OnInit {
     location.replace("http://localhost:8080/admin/mes-taches");
   }
 
+  listeSessions(){
+    location.replace("http://localhost:8080/admin/liste-des-sessions");
+  }
+
   ngOnInit(): void {
   }
 
