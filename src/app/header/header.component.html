@@ -25,9 +25,9 @@
                     </div>
                 </div>
                 <form class="container-fluid d-flex justify-content-end">
-                    <button  (click)="connexion()" class="btn btn-primary me-2" type="button">Connexion</button>
-                    <button   (click)="deconnexion()" class="btn btn-danger me-2" type="button"   >Deconnexion</button>
-                  </form>
+                    <button [hidden]="this.isConnected" (click)="connexion()" class="btn btn-primary me-2" type="button">Connexion</button>
+                    <button *ngIf="this.isConnected == true" (click)="deconnexion()" class="btn btn-danger me-2" type="button">Deconnexion</button>
+                </form>
             </div>
             
         </div>
