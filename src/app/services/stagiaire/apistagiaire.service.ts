@@ -9,8 +9,14 @@ import { Stagiaire } from 'src/app/models/stagiaire/stagiaire';
 export class ApistagiaireService {
 
   private urlStagiaire: string = "http://localhost:8080/WS/stagiaire";
+  private urlSessionFromStagiaire: string = "http://localhost:8080/WS/stagiaire-session";
 
   constructor(private http : HttpClient) {}
+
+  getSessionForStagiaireById(id:string){
+    return this.http.get(this.urlSessionFromStagiaire+"/"+id);
+  }
+
   getStagiaires(): Observable<any>{
     return this.http.get(this.urlStagiaire);
   }
