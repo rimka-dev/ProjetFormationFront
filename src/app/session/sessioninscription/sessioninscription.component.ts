@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ApiformationsService } from 'src/app/services/apiformations.service';
+import { ApiformationsService } from 'src/app/apiformations.service'; 
 import { ApisessionService } from 'src/app/services/session/apisession.service';
 
 @Component({
