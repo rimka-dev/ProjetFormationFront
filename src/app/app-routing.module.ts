@@ -8,6 +8,7 @@ import { ListeFComponent } from './backOffice/formation/liste-f/liste-f.componen
 import { UpdateformationComponent } from './backOffice/formation/updateformation/updateformation.component';
 import { AddstagiaireComponent } from './backOffice/stagiaire/addstagiaire/addstagiaire.component';
 import { ListestagiaireComponent } from './backOffice/stagiaire/listestagiaire/listestagiaire.component';
+import { UpdateStagiaireComponent } from './backOffice/stagiaire/update-stagiaire/update-stagiaire.component';
 import { CatalogueComponent } from './catalogue/catalogue.component';
 import { ContactComponent } from './contact/contact.component';
 import { DetailformationComponent } from './formation/detailformation/detailformation.component';
@@ -28,6 +29,7 @@ const routes: Routes = [
   {path: 'admin/formation/udateformation/:id', component: UpdateformationComponent },
   {path: 'admin/stagiaire/liste', component: ListestagiaireComponent },
   {path: 'admin/stagiaire/ajouter', component: AddstagiaireComponent },
+  {path: 'admin/stagiaire/udateStagiaire/:id', component: UpdateStagiaireComponent },
   {path: 'admin/formateur/liste', component: ListeformateurComponent },
   {path: 'admin/formateur/udateFormateur/:id', component: UpdateformateurComponent },
   {path: '**', component: PageNotFoundComponent}
