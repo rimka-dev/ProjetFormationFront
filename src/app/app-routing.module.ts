@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AccueilBackComponent } from './backOffice/accueil-back/accueil-back.component';
+import { ListeformateurComponent } from './backOffice/formateur/listeformateur/listeformateur.component';
+import { UpdateformateurComponent } from './backOffice/formateur/updateformateur/updateformateur.component';
 import { AddformationComponent } from './backOffice/formation/addformation/addformation.component';
 import { ListeFComponent } from './backOffice/formation/liste-f/liste-f.component';
 import { UpdateformationComponent } from './backOffice/formation/updateformation/updateformation.component';
@@ -9,7 +11,6 @@ import { ListestagiaireComponent } from './backOffice/stagiaire/listestagiaire/l
 import { CatalogueComponent } from './catalogue/catalogue.component';
 import { ContactComponent } from './contact/contact.component';
 import { DetailformationComponent } from './formation/detailformation/detailformation.component';
-import { ListFormationComponent } from './list-formation/list-formation.component';
 import { PageAccueilComponent } from './page-accueil/page-accueil.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { SessioninscriptionComponent } from './session/sessioninscription/sessioninscription.component';
@@ -27,6 +28,8 @@ const routes: Routes = [
   {path: 'admin/formation/udateformation/:id', component: UpdateformationComponent },
   {path: 'admin/stagiaire/liste', component: ListestagiaireComponent },
   {path: 'admin/stagiaire/ajouter', component: AddstagiaireComponent },
+  {path: 'admin/formateur/liste', component: ListeformateurComponent },
+  {path: 'admin/formateur/udateFormateur/:id', component: UpdateformateurComponent },
   {path: '**', component: PageNotFoundComponent}
 ];
 
