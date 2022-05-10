@@ -23,6 +23,8 @@ import { AddstagiaireComponent } from './backOffice/stagiaire/addstagiaire/addst
 import { DetailformationComponent } from './formation/detailformation/detailformation.component';
 import { SessioninscriptionComponent } from './session/sessioninscription/sessioninscription.component';
 import { AccueilBackComponent } from './backOffice/accueil-back/accueil-back.component';
+import { ListeformateurComponent } from './backOffice/formateur/listeformateur/listeformateur.component';
+import { UpdateformateurComponent } from './backOffice/formateur/updateformateur/updateformateur.component';
 
 
 
@@ -44,7 +46,9 @@ import { AccueilBackComponent } from './backOffice/accueil-back/accueil-back.com
     ListestagiaireComponent,
     AddstagiaireComponent,
     DetailformationComponent,
-    SessioninscriptionComponent
+    SessioninscriptionComponent,
+    ListeformateurComponent,
+    UpdateformateurComponent
   ],
   imports: [
     BrowserModule,
