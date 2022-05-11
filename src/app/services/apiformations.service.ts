@@ -8,6 +8,18 @@ import { Formation } from '../models/formation';
 })
 export class ApiformationsService {
   private urlFormation: string = "http://localhost:8080/WS/formation";
+  private urlStagiaireToSession : string = "http://localhost:8080/WS/stagiaire-to-session";
+
+  addStagiaireToSession(idSession:string, idStagiaire: string){
+    let httpOptionsCreate = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json'
+      })
+    };
+    console.log("apiformation : "+this.urlStagiaireToSession+"/"+idSession+"/"+idStagiaire);
+    
+    return this.http.post(this.urlStagiaireToSession+"/"+idSession+"/"+idStagiaire,httpOptionsCreate);
+  }
 
   constructor(private http : HttpClient) {}
   getFormations(): Observable<any>{

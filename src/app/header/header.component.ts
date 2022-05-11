@@ -47,6 +47,7 @@ export class HeaderComponent implements OnInit {
   });
   this.isConnected = false;
   location.reload();
+  location.replace("http://localhost:4200/page-accueil");
   }
 
   profilStagiaire(id : any){
