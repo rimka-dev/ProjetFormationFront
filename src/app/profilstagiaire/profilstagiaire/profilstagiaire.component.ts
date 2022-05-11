@@ -40,7 +40,9 @@ export class ProfilstagiaireComponent implements OnInit {
   };
   onUpdateStagiaire(stagiaire : Stagiaire){
     this.route.navigate(["admin/stagiaire/udateStagiaire/"+stagiaire.idUtilisateur]);
-  }
+  };
+
+  
 
   ngOnInit(): void {
     this.id = this.activatedRoute.snapshot.params['id'];
@@ -53,7 +55,6 @@ export class ProfilstagiaireComponent implements OnInit {
             this.sessions.push(session);
             console.log(session);
           }
-
          
         },
         error: (error) => {
@@ -62,7 +63,11 @@ export class ProfilstagiaireComponent implements OnInit {
         }
       });
 
-    } 
+    }
+     
+  };
+  redirectEvalSession(){
+    location.replace("http://localhost:8080/evaluation-formation/add/"+this.sessions[0].idSession);
   }
 
 }
