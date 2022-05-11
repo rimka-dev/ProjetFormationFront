@@ -21,6 +21,7 @@
                 <p class="card-text"><b>Date de fin :</b> {{session?.dateFin |date:'dd-MM-yyy'}}</p>
                 <p class="card-text"><b> Salle de formation :</b> {{session?.salleFormation.nom}}</p>
                 <p class="card-text"><b> Etage :</b> {{session?.salleFormation.etage}}</p>
+                <a  (click)="redirectEvalSession()" class="btn btn-outline-success" >Evaluer ma session </a>
            </div>
         </article>
     </div>
