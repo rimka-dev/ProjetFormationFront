@@ -53,7 +53,4 @@ export class HeaderComponent implements OnInit {
   profilStagiaire(id : any){
     this.route.navigate(["profil/stagiaire/"+id]);
   }
-
-  
-
 }
